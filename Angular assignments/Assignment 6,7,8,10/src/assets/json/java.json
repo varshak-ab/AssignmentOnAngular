@@ -1,0 +1,17 @@
+[{
+
+    "courseid":101,
+    "coursename":"HTML5",
+    "courseprice":3000,
+    "coursedesc":"Course Contains All HTML5 Material ",
+    "courseImg":"assets/images/html5.jpg"
+  
+  },
+  {
+    "courseid":102,
+    "coursename":"AWS",
+    "courseprice":4000,
+    "coursedesc":"Course Contains All AWS Material ",
+    "courseImg":"assets/images/aws.jpg"
+  }
+  ]

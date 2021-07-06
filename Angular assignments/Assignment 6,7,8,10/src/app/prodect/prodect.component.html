@@ -1,0 +1,52 @@
+<h2>product works!</h2><hr>
+<div class ="container">
+    <table border="1px" class="table table-hover"> 
+<tr>
+    <td colspan="4">Search:<input type="text" [(ngModel)]="filter" ></td>
+</tr>
+
+    <select class="form-select" [(ngModel)]="funnel" >
+        <option [value]="'a-z'">A-Z</option>
+        <option [value]="'z-a'">Z-A</option>
+        <option [value]="'low'">Low-High</option>
+        <option [value]="'high'">High-Low</option>
+      </select>
+      
+   
+    <tr>
+        <th>
+            Product Id
+        </th>
+        <th>
+            Product Name
+        </th>
+        <th>
+            Product Price
+        </th>
+        <th>
+            Product Dec
+        </th>
+        <th>
+            Product Img
+        </th>
+    </tr>
+    <tr ngColor *ngFor="let product of  Products|search:filter|sort:funnel">
+
+        <td>
+               {{product.productId}}
+        </td>
+        <td>
+            {{product.productName}}
+     </td>
+     <td>
+        {{product.productPrice}}
+ </td>
+ <td>
+    {{product.productDes}}
+</td>
+<td>
+    <img [src]="product.productImg" height="70px" width="90px">
+</td>
+    </tr>
+</table>
+</div>
